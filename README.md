@@ -18,7 +18,7 @@
 ```text
 QQ节点-clean/
 ├── Program/
-│   ├── agent.py
+│   ├── agent.py (暂不公开)
 │   ├── agent_config.template.json
 │   └── requirements.txt
 ├── NapCat-Template-lite/
@@ -27,6 +27,14 @@ QQ节点-clean/
 │   ├── qqnt.json
 │   ├── package.json
 │   └── loadNapCat.js
+├── php-panel/
+│   ├── config.php
+│   ├── api_agent.php
+│   ├── login.php
+│   ├── index.php
+│   ├── includes/
+│   ├── pages/
+│   └── akalullusmtpy/
 ├── Check-Node.ps1
 ├── Install-Node.bat
 ├── Install-Node.ps1
@@ -49,6 +57,14 @@ QQ节点-clean/
 - `message_store.db_name` -> `REPLACE_WITH_DB_NAME`
 - `message_store.secret` -> `REPLACE_WITH_LOCAL_SECRET`
 - 示例 QQ 号 `123456` -> `10000`
+
+在 `php-panel/config.php` 中也已替换为占位符：
+
+- `DB_USER` -> `REPLACE_WITH_DB_USER`
+- `DB_PASS` -> `REPLACE_WITH_DB_PASS`
+- `DB_NAME` -> `REPLACE_WITH_DB_NAME`
+- `GT4_CAPTCHA_ID` -> `REPLACE_WITH_GT4_CAPTCHA_ID`
+- `GT4_CAPTCHA_KEY` -> `REPLACE_WITH_GT4_CAPTCHA_KEY`
 
 ## 需要你自己后续处理的部分
 
@@ -114,6 +130,23 @@ pip install -r Program/requirements.txt
 - `Install-Node.ps1`
 - `Check-Node.ps1`
 - `Restart-Node.ps1`
+
+### 5. 初始化 PHP 面板
+
+`php-panel/` 目录为配套的 PHP 面板与 API 服务（已做脱敏处理）。
+
+首次使用前需要修改 `php-panel/config.php`：
+
+- 数据库连接信息
+- `SMTP_ADMIN_TOKEN` / `.private/node_token` 对应的 Node API token
+- Geetest 配置（若你不使用验证码，可留空或按你的版本自行处理）
+
+推荐做法：
+
+1. 复制 `php-panel/` 到你的站点目录
+2. 配置数据库并导入表结构（首次访问也会自动建部分表）
+3. 配置 Node API token
+4. 再访问后台 `akalullusmtpy/`
 
 ## 开源建议
 
