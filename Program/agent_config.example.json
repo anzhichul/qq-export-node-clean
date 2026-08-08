@@ -1,0 +1,51 @@
+﻿{
+    "cloud_url":  "http://your-server.example:28741",
+    "agent_token":  "REPLACE_WITH_AGENT_TOKEN",
+    "node_id":  "REPLACE_ON_INSTALL",
+    "name":  "REPLACE_ON_INSTALL",
+    "napcat_template":  "C:\\ProgramData\\AkaCloud\\template",
+    "qq_path":  "C:\\Program Files\\Tencent\\QQNT\\QQ.exe",
+    "runtimes_dir":  "C:\\ProgramData\\AkaCloud\\runtimes",
+    "http_port_start":  3001,
+    "webui_port_start":  6100,
+    "port_step":  10,
+    "allow_same_profile_multi_instance":  true,
+    "idle_timeout_seconds":  600,
+    "unlogged_timeout_seconds":  180,
+    "max_active_accounts":  10,
+    "private_sync_batch_seconds":  180,
+    "message_store":  {
+                          "enabled":  true,
+                          "db_host":  "127.0.0.1",
+                          "db_port":  3306,
+                          "db_user":  "REPLACE_WITH_DB_USER",
+                          "db_pass":  "REPLACE_WITH_DB_PASSWORD",
+                          "db_name":  "REPLACE_WITH_DB_NAME",
+                          "bind":  "127.0.0.1",
+                          "listen_port":  3015,
+                          "path":  "/napcat/event",
+                          "secret":  "REPLACE_WITH_LOCAL_SECRET",
+                          "sync_on_login":  true,
+                          "private_history_limit":  20,
+                          "sync_stop_before_seconds":  120
+                      },
+    "oss":  {
+                "enabled":  true,
+                "endpoint":  "https://oss-cn-beijing.aliyuncs.com",
+                "bucket":  "REPLACE_WITH_OSS_BUCKET",
+                "access_key_id":  "REPLACE_WITH_OSS_ACCESS_KEY_ID",
+                "access_key_secret":  "REPLACE_WITH_OSS_ACCESS_KEY_SECRET",
+                "public_base_url":  "https://your-bucket.example.com",
+                "prefix":  "collections",
+                "download_timeout":  45
+            },
+    "accounts":  [
+
+                 ],
+    "slot_pool_enabled":  true,
+    "slot_pool_count":  15,
+    "slot_pool_wait_seconds":  600,
+    "assigned_accounts":  {
+
+                          }
+}

@@ -18,8 +18,9 @@
 ```text
 QQ节点-clean/
 ├── Program/
-│   ├── agent.py (暂不公开)
-│   ├── agent_config.template.json
+│   ├── agent.py
+│   ├── export_only.py
+│   ├── agent_config.example.json
 │   └── requirements.txt
 ├── NapCat-Template-lite/
 │   ├── launcher*.bat
@@ -74,8 +75,8 @@ QQ节点-clean/
 
 因此：
 
-- `Program/agent.py` **目前保持原样**，我没有替你改动业务逻辑
-- 在公开到 GitHub 前，建议你自己再检查一遍 `agent.py` 里是否还含有：
+- `Program/agent.py` **目前保留最新版逻辑**，我没有替你改动业务逻辑
+- 我已经确认它不再直接包含你之前那批明显的域名 / 数据库 / token 真值，但仍建议你在公开前自己再检查一遍 `agent.py` 里是否还含有：
   - 私有接口地址
   - 认证 token / header
   - 数据库 / 本地机器信息
@@ -88,7 +89,7 @@ QQ节点-clean/
 将：
 
 ```text
-Program/agent_config.template.json
+Program/agent_config.example.json
 ```
 
 复制为：
