@@ -1,0 +1,22 @@
+# 运行时目录 / 日志
+logs/
+runtime/
+runtimes/
+data/
+temp/
+*.log
+*.lock
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 用户本地配置（复制模板后自行填写）
+Program/agent_config.json
+
+# NapCat / QQ 运行期内容
+NapCat-Template-lite/profile/
+NapCat-Template-lite/runtime/
+NapCat-Template-lite/cache/

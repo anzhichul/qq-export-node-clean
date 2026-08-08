@@ -1,0 +1,10 @@
+Package: AkaCloud QQ Node
+Agent concurrency limit: 10
+Idle release: 600 seconds
+QQ version: 9.9.30-48517 x64
+Python version: 3.12.10 x64
+NapCat version: 4.18.13
+OneBot port start: 3001
+WebUI port start: 6100
+Port step: 10
+Message callback port: 3015
